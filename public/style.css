@@ -116,3 +116,7 @@ footer.site a { color: var(--text-2); }
   .doc td { border-bottom: none; padding: 4px 0; }
   .doc tr { border-bottom: 1px solid var(--line); padding: 10px 0; }
 }
+
+/* Fraunces display type (matches the app) */
+h1, h2, .brand, .stat strong, .plan .price { font-family: "Fraunces", Georgia, serif; font-optical-sizing: auto; font-weight: 600; letter-spacing: -0.01em; }
+.hero h1 { font-weight: 600; }
