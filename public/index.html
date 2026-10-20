@@ -8,7 +8,8 @@
 <meta property="og:title" content="Olana Browser">
 <meta property="og:description" content="Browse in peace. Ads and trackers blocked, private by design, made for iPhone.">
 <meta property="og:image" content="https://olanabrowser.com/assets/logo.png">
-<meta name="theme-color" content="#E0461B">
+<meta name="theme-color" content="#EEF4F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0D1626" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="/assets/favicon.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,57 +17,120 @@
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-apple" viewBox="0 0 24 24"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9s-1.9-.9-3.2-.8c-1.6 0-3.2 1-4 2.5-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8s1.9.8 3.2.8c1.3 0 2.1-1.2 2.9-2.4.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.4-.9-2.4-4zM14 5.4c.6-.8 1.1-1.9 1-3-1 0-2.1.6-2.8 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2.1-.5 2.8-1.3z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 3l7 3v5.5c0 4.4-3 8.2-7 9.5-4-1.3-7-5.1-7-9.5V6l7-3z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M5 20c1.2-3.5 4-5 7-5s5.8 1.5 7 5"/><path stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 4l16 16"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M4 20h16M7 16v-4M12 16V7M17 16v-6"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 5.5C6.5 4.5 9.5 4.5 12 6c2.5-1.5 5.5-1.5 8-.5V19c-2.5-1-5.5-1-8 .5-2.5-1.5-5.5-1.5-8-.5V5.5zM12 6v13.5"/></symbol>
+  <symbol id="i-mask" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 9c3-1 6-1 9 0 3-1 6-1 9 0v2c0 3-2 5-4.5 5S13 14 12 12c-1 2-2 4-4.5 4S3 14 3 11V9z"/></symbol>
+  <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M11 12l8-8M16 7l2 2M14 9l2 2"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3zM18.5 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2z"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="9.5" r="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M3.5 19c.9-3 3-4.5 5.5-4.5S13.6 16 14.5 19M15 14.6c2.6-.3 4.5 1 5.5 3.9"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 20h14"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="currentColor" d="M10 9.2v5.6l4.6-2.8z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6 3h8l4 4v14H6V3zM14 3v4h4"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M9 16c1-1.5 2-2 3-1s2 .5 3-1"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 3a9 9 0 100 18c1.4 0 1.8-1.2 1.2-2.2-.7-1.2.1-2.8 1.6-2.8H17a4 4 0 004-4c0-5-4-9-9-9z"/><circle cx="7.5" cy="11" r="1.3" fill="currentColor"/><circle cx="10.5" cy="7" r="1.3" fill="currentColor"/><circle cx="15" cy="7.5" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></symbol>
+</svg>
+
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/"><img src="/assets/logo.png" alt="">olana</a>
-    <nav class="top"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="/support">Support</a><a href="/privacy">Privacy</a></nav>
+    <nav class="top"><a class="optional" href="#features">Features</a><a href="#pricing">Pricing</a><a href="/support">Support</a><a class="optional" href="/privacy">Privacy</a></nav>
   </div>
 </header>
 
 <main>
-  <div class="hero wrap">
-    <img class="logo" src="/assets/logo.png" alt="Olana app icon">
-    <h1>Browse in peace.</h1>
-    <p class="lead">Olana is a calm, fast web browser for iPhone. Ads and trackers are blocked before they load, private tabs stay locked, and everything you save stays on your iPhone.</p>
-    <a class="cta" href="https://apps.apple.com/app/id6819876230">Download on the App Store</a>
-    <div class="badges">
-      <span class="pill"><b>100/100</b> on adblock-tester.com</span>
-      <span class="pill">No account needed</span>
-      <span class="pill">AI that runs on your iPhone</span>
+  <div class="hero">
+    <svg class="breeze" viewBox="0 0 1440 640" preserveAspectRatio="none" aria-hidden="true">
+      <path stroke-width="10" d="M-80 190 C 240 120, 520 260, 820 190 S 1300 120, 1520 200"/>
+      <path stroke-width="7" d="M-80 330 C 300 270, 600 400, 900 320 S 1320 270, 1520 340"/>
+      <path stroke-width="12" d="M-80 470 C 260 420, 560 540, 880 470 S 1280 410, 1520 480"/>
+    </svg>
+    <div class="wrap">
+      <div>
+        <h1>Browse in peace.</h1>
+        <p class="lead">A calm, fast web browser for iPhone. Ads and trackers are blown away before they load, and what you save stays on your iPhone.</p>
+        <a class="cta" href="https://apps.apple.com/app/id6819876230"><svg aria-hidden="true"><use href="#i-apple"/></svg>Download on the App Store</a>
+        <ul class="facts">
+          <li><svg aria-hidden="true"><use href="#i-shield"/></svg>100/100 on adblock-tester.com</li>
+          <li><svg aria-hidden="true"><use href="#i-user"/></svg>No account needed</li>
+          <li><svg aria-hidden="true"><use href="#i-chip"/></svg>AI that runs on your iPhone</li>
+        </ul>
+      </div>
+      <div class="stage" aria-hidden="true">
+        <div class="phone"><img src="/assets/shots/06-paper-light.webp" alt="" width="600" height="1304" fetchpriority="high"></div>
+        <div class="ad a1">Ad</div>
+        <div class="ad a2">Sponsored</div>
+        <div class="ad a3">Ad</div>
+        <div class="blocked"><svg><use href="#i-shield"/></svg>2,465 <span>blocked this week</span></div>
+      </div>
     </div>
   </div>
 
-  <section class="band">
-    <div class="wrap stat-row">
-      <div class="stat"><strong>120k+</strong><span>ad &amp; tracker rules, updated daily</span></div>
-      <div class="stat"><strong>0</strong><span>accounts, ads or tracking</span></div>
-      <div class="stat"><strong>5</strong><span>start-page layouts</span></div>
-      <div class="stat"><strong>15</strong><span>search engines, from Google to Qwant</span></div>
+  <section class="gallery" aria-labelledby="tour">
+    <div class="wrap gallery-head">
+      <div>
+        <h2 id="tour">See it on iPhone</h2>
+        <p class="sub">Every screen is built for one hand, in light or dark.</p>
+      </div>
+      <div class="arrows">
+        <button type="button" data-dir="-1" aria-label="Previous screenshots"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
+        <button type="button" data-dir="1" aria-label="Next screenshots"><svg aria-hidden="true"><use href="#i-right"/></svg></button>
+      </div>
+    </div>
+    <div class="shots" tabindex="0" aria-label="Screenshots">
+      <figure><div class="phone"><img src="/assets/shots/01-home-light.webp" alt="Olana's start page with favourite sites and a search bar" width="600" height="1304" loading="lazy"></div><figcaption><b>Start where you left off</b><span>Your sites, one tap away.</span></figcaption></figure>
+      <figure><div class="phone"><img src="/assets/shots/02-shields-light.webp" alt="Shields panel showing ads and trackers blocked on a site" width="600" height="1304" loading="lazy"></div><figcaption><b>Shields on every page</b><span>See what was stopped, site by site.</span></figcaption></figure>
+      <figure><div class="phone"><img src="/assets/shots/03-tabs-light.webp" alt="Tab grid with open and private tabs" width="600" height="1304" loading="lazy"></div><figcaption><b>Tabs that stay tidy</b><span>Groups, private tabs and Face ID.</span></figcaption></figure>
+      <figure><div class="phone"><img src="/assets/shots/04-downloads-light.webp" alt="Downloads list with files in progress" width="600" height="1304" loading="lazy"></div><figcaption><b>Downloads and files</b><span>Keep what you save, organised.</span></figcaption></figure>
+      <figure><div class="phone"><img src="/assets/shots/05-passwords-light.webp" alt="Password manager with a generator and verification codes" width="600" height="1304" loading="lazy"></div><figcaption><b>Passwords and codes</b><span>Kept in your iPhone's Keychain.</span></figcaption></figure>
+      <figure><div class="phone"><img src="/assets/shots/06-paper-light.webp" alt="The Paper start page with a reading list" width="600" height="1304" loading="lazy"></div><figcaption><b>Five start pages</b><span>Including Paper, for reading.</span></figcaption></figure>
     </div>
   </section>
 
   <section id="features">
     <div class="wrap">
-      <h2>Everything a modern browser should do</h2>
-      <p class="sub">Thoughtfully built for iPhone, with nothing that gets in your way.</p>
-      <div class="grid">
-        <div class="card"><div class="icon">🛡️</div><h3>Shields</h3><p>EasyList-powered ad blocking on every page, plus tracker, cookie-banner and element blocking. See exactly what was stopped on each site.</p></div>
-        <div class="card"><div class="icon">🕶️</div><h3>Private tabs</h3><p>Nothing is kept from private tabs — no history, cookies or form data — and you can lock them with Face ID.</p></div>
-        <div class="card"><div class="icon">⬇️</div><h3>Downloads &amp; Files</h3><p>Downloads keep going in the background. Browse and rename your files — and with Pro, open ZIP archives and share files to your computer over Wi‑Fi.</p></div>
-        <div class="card"><div class="icon">🔑</div><h3>Passwords &amp; 2FA codes</h3><p>Logins saved in your iPhone's Keychain, filled in after Face ID, with a generator, leak check and verification codes.<span class="pro">PRO</span></p></div>
-        <div class="card"><div class="icon">📖</div><h3>Reader &amp; translate</h3><p>Distraction-free reading with read-aloud, find on page, and page translation on your iPhone.</p></div>
-        <div class="card"><div class="icon">✦</div><h3>Olana AI</h3><p>Summarise a page or ask anything. It runs on Apple's on-device model — your chats never leave your iPhone.<span class="pro">PRO</span></p></div>
-        <div class="card"><div class="icon">🎨</div><h3>Make it yours</h3><p>Five start pages, colour themes, alternate app icons, glass or solid toolbars and a customisable toolbar button.<span class="pro">PRO</span></p></div>
-        <div class="card"><div class="icon">📊</div><h3>Privacy report &amp; site info</h3><p>See blocked ads and trackers over time, every site's certificate, permissions, load speed and who it talks to.</p></div>
-        <div class="card"><div class="icon">👥</div><h3>Profiles</h3><p>Separate Personal, Work and Shopping profiles, each with its own cookies, logins and user agent.<span class="pro">PRO</span></p></div>
+      <h2>Everything a browser should do, quietly</h2>
+      <p class="sub">Grouped by what you get out of it.</p>
+      <div class="groups">
+        <div class="group">
+          <div><h3>Quiet</h3><p class="lede">Pages load without the noise.</p></div>
+          <div class="items">
+            <div class="item"><svg aria-hidden="true"><use href="#i-shield"/></svg><div><h4>Shields</h4><p>Ad blocking on every page from EasyList. Pro adds tracker, cookie-banner and element blocking.</p></div></div>
+            <div class="item"><svg aria-hidden="true"><use href="#i-chart"/></svg><div><h4>Privacy report and site info</h4><p>What was blocked over time, and each site's certificate, permissions and load speed.</p></div></div>
+            <div class="item"><svg aria-hidden="true"><use href="#i-book"/></svg><div><h4>Reader and translate</h4><p>Distraction-free reading, find on page, and page translation done on your iPhone.</p></div></div>
+            <div class="item"><svg aria-hidden="true"><use href="#i-play"/></svg><div><h4>Captions for any video</h4><p>Captions and translated captions, made on your iPhone, plus picture in picture.<span class="pro">Pro</span></p></div></div>
+          </div>
+        </div>
+        <div class="group">
+          <div><h3>Private</h3><p class="lede">What you do stays with you.</p></div>
+          <div class="items">
+            <div class="item"><svg aria-hidden="true"><use href="#i-mask"/></svg><div><h4>Private tabs</h4><p>No history, cookies or form data kept, and you can lock them with Face ID.</p></div></div>
+            <div class="item"><svg aria-hidden="true"><use href="#i-key"/></svg><div><h4>Passwords and 2FA codes</h4><p>Logins in your iPhone's Keychain, filled after Face ID, with a generator and leak check.</p></div></div>
+            <div class="item"><svg aria-hidden="true"><use href="#i-spark"/></svg><div><h4>Olana AI</h4><p>Summarise a page or ask anything. It runs on Apple's on-device model.<span class="pro">Pro</span></p></div></div>
+            <div class="item"><svg aria-hidden="true"><use href="#i-people"/></svg><div><h4>Profiles</h4><p>Personal, Work and Shopping, each with its own cookies and logins.<span class="pro">Pro</span></p></div></div>
+          </div>
+        </div>
+        <div class="group">
+          <div><h3>Yours</h3><p class="lede">Keep what you find, your way.</p></div>
+          <div class="items">
+            <div class="item"><svg aria-hidden="true"><use href="#i-down"/></svg><div><h4>Downloads and Files</h4><p>Download files and keep them organised. Pro saves videos and audio, downloads in the background and shares over Wi‑Fi.</p></div></div>
+            <div class="item"><svg aria-hidden="true"><use href="#i-doc"/></svg><div><h4>PDFs and file tools</h4><p>Read any PDF. Pro fills and signs them, converts files and opens ZIP archives.</p></div></div>
+            <div class="item"><svg aria-hidden="true"><use href="#i-palette"/></svg><div><h4>Make it yours</h4><p>Five start pages to choose from, plus colour themes, app icons and glass or solid toolbars.<span class="pro">Pro</span></p></div></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="pricing">
     <div class="wrap">
-      <h2>Simple pricing</h2>
-      <p class="sub">Start free. Try every Pro feature free for 7 days.</p>
+      <h2>Free to start. Pro when you want more.</h2>
+      <p class="sub">Try every Pro feature free for 7 days.</p>
       <div class="plans">
         <div class="plan">
           <h3>Free</h3>
@@ -74,26 +138,38 @@
           <ul>
             <li>Fast, private browsing</li>
             <li>Ad blocking on every page</li>
-            <li>3 tabs and private tabs</li>
+            <li>3 tabs, and private tabs with Face ID</li>
+            <li>Passwords and 2FA codes</li>
             <li>File downloads</li>
-            <li>Reader, translate, find on page</li>
+            <li>Reader, translate and find on page</li>
             <li>Privacy report and site info</li>
           </ul>
         </div>
         <div class="plan featured">
           <h3>Olana Pro</h3>
           <div class="price">$24.99 <small>/ year</small></div>
+          <p class="alt">or $4.99 / month</p>
           <ul>
-            <li>Unlimited tabs and tab groups</li>
-            <li>Tracker, cookie-banner and element blocking</li>
-            <li>Save videos and audio</li>
-            <li>Passwords and 2FA codes</li>
-            <li>Wi‑Fi sharing and ZIP archives</li>
-            <li>Olana AI, profiles, themes and icons</li>
+            <li>Unlimited tabs, tab groups and saved sessions</li>
+            <li>Tracker, cookie-banner and element blocking, link cleaning</li>
+            <li>Save videos, audio and photos from pages</li>
+            <li>Background, faster and parallel downloads</li>
+            <li>Captions and picture in picture</li>
+            <li>Wi‑Fi sharing, ZIP archives and folder lock</li>
+            <li>Fill and sign PDFs, file conversion</li>
+            <li>Olana AI, profiles, themes and app icons</li>
           </ul>
-          <p style="color:var(--text-3);font-size:14px;margin:14px 0 0">Or $4.99 / month. 7-day free trial. Cancel anytime in your Apple Account settings.</p>
+          <p class="fine">7-day free trial, then auto-renews. Cancel anytime in your Apple Account settings. Prices in US dollars; your App Store shows your local price.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="wrap">
+      <h2>Give your iPhone a quieter web.</h2>
+      <p>Free on the App Store. No account, no sign-up.</p>
+      <a class="cta" href="https://apps.apple.com/app/id6819876230"><svg aria-hidden="true"><use href="#i-apple"/></svg>Download on the App Store</a>
     </div>
   </section>
 </main>
@@ -104,5 +180,16 @@
     <nav><a href="/support">Support</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Use</a><a href="mailto:essentialdevteam@gmail.com">Contact</a></nav>
   </div>
 </footer>
+
+<script>
+  // Gallery arrows: scroll one screenshot at a time.
+  document.querySelectorAll('.arrows button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var row = document.querySelector('.shots');
+      var step = row.querySelector('figure').getBoundingClientRect().width + 24;
+      row.scrollBy({ left: step * Number(b.dataset.dir), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    });
+  });
+</script>
 </body>
 </html>
